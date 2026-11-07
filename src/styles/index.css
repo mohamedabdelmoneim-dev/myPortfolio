@@ -79,6 +79,7 @@
     background-image: linear-gradient(rgb(var(--line)) 1px, transparent 1px),
       linear-gradient(90deg, rgb(var(--line)) 1px, transparent 1px);
     background-size: 4rem 4rem;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent);
     mask-image: linear-gradient(to bottom, black, transparent);
   }
 }
