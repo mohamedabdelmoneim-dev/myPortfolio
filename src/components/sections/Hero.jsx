@@ -6,7 +6,8 @@ import { usePrefersReducedMotion } from "../../hooks/useMediaQuery";
 import { useLanguage } from "../../hooks/useLanguage";
 import Button from "../ui/Button";
 import SocialLinks from "../common/SocialLinks";
-
+// import myImage from "../../assets/images/myImage.jpeg";
+import myImage from "../../assets/images/Sunglasses and Yellow Tee Portrait.png";
 export default function Hero() {
   const { t } = useLanguage();
   const root = useRef(null);
@@ -33,6 +34,10 @@ export default function Hero() {
         className="pointer-events-none absolute -top-40 end-[-10%] h-[36rem] w-[36rem] rounded-full opacity-[0.12] blur-3xl"
         style={{ background: "radial-gradient(circle, rgb(var(--accent)), transparent 70%)" }}
       />
+
+      <div className="pointer-events-none absolute top-1/5 hidden -translate-y-1/2 overflow-hidden bg-surface/40 md:block" style={{ borderRadius: "50%", width : "28rem", height: "28rem", right: "25%" }}>
+        <img src={myImage} alt="" />
+      </div>
 
       <div className="container-page relative">
         <p data-hero-fade="a" className="eyebrow mb-6 md:mb-8">
