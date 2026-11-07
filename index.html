@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0e0e10" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <title>Mohamed Abdelmoneim — Frontend Developer</title>
+    <script>
+      // Runs before first paint: applies saved theme and language so nothing flickers.
+      (function () {
+        try {
+          var theme = localStorage.getItem("portfolio-theme");
+          var lang = localStorage.getItem("portfolio-lang");
+          var root = document.documentElement;
+          root.dataset.theme = theme === "light" ? "light" : "dark";
+          if (lang === "ar") {
+            root.lang = "ar";
+            root.dir = "rtl";
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

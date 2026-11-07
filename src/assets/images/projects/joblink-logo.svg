@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224 224" role="img" aria-labelledby="title">
+  <title>JobLink</title>
+  <rect width="224" height="224" rx="48" fill="#2f7d68"/>
+  <path d="M53 62h30v72c0 11 5 17 16 17 10 0 16-6 16-17V62h30v74c0 30-17 47-46 47-30 0-46-17-46-47V62Zm103 0h30v116h-30V62Z" fill="#fff"/>
+</svg>

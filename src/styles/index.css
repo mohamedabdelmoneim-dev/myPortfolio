@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Design tokens (RGB triplets so Tailwind opacity works) ---------- */
+:root,
+:root[data-theme="dark"] {
+  --bg: 14 14 16;
+  --surface: 22 22 25;
+  --elevated: 30 30 34;
+  --line: 255 255 255 / 0.09;
+  --fg: 236 234 229;
+  --muted: 150 148 142;
+  --accent: 255 122 69;
+  --accent-fg: 20 12 8;
+  --font-display: "Bricolage Grotesque Variable", "IBM Plex Sans Arabic", system-ui, sans-serif;
+  --font-body: "Inter Variable", "IBM Plex Sans Arabic", system-ui, sans-serif;
+}
+
+:root[data-theme="light"] {
+  --bg: 246 244 239;
+  --surface: 255 255 255;
+  --elevated: 238 235 228;
+  --line: 20 20 22 / 0.1;
+  --fg: 22 22 24;
+  --muted: 104 102 96;
+  --accent: 208 78 24;
+  --accent-fg: 255 255 255;
+}
+
+/* Arabic: swap to a proper Arabic face and drop tracking (letter-spacing breaks Arabic joins). */
+:root[lang="ar"] {
+  --font-display: "IBM Plex Sans Arabic", "Bricolage Grotesque Variable", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans Arabic", "Inter Variable", system-ui, sans-serif;
+}
+:root[lang="ar"] * {
+  letter-spacing: 0 !important;
+}
+
+/* ---------- Base ---------- */
+@layer base {
+  html {
+    color-scheme: dark;
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5rem;
+  }
+  html[data-theme="light"] {
+    color-scheme: light;
+  }
+  body {
+    @apply bg-bg font-body text-fg antialiased;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+  p { text-wrap: pretty; }
+  ::selection { background: rgb(var(--accent) / 0.35); }
+  :focus-visible {
+    outline: 2px solid rgb(var(--accent));
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  * { border-color: rgb(var(--line)); }
+}
+
+/* ---------- Layout helpers ---------- */
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-page px-5 sm:px-8 lg:px-12;
+  }
+  .section-y { @apply py-24 md:py-36; }
+  .eyebrow {
+    @apply text-xs font-medium uppercase tracking-[0.22em] text-accent;
+  }
+  .hairline { @apply border-t border-line; }
+  .bg-grid {
+    background-image: linear-gradient(rgb(var(--line)) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(var(--line)) 1px, transparent 1px);
+    background-size: 4rem 4rem;
+    mask-image: linear-gradient(to bottom, black, transparent);
+  }
+}
+
+.flip-scene { perspective: 1200px; }
+.flip-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.flip-inner[data-flipped="true"] { transform: rotateY(180deg); }
+.flip-face { backface-visibility: hidden; }
+.flip-back { transform: rotateY(180deg); }
+
+/* Smooth colour change only while the user toggles the theme */
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease,
+    fill 0.4s ease, stroke 0.4s ease !important;
+}
+
+/* ---------- Lenis recommended CSS ---------- */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.view-all-projects {
+  transition: 0.3s ease;
+}
+.view-all-projects:hover {
+  color: rgb(var(--accent) / 0.9);
+  transform: translateX(5px);
+}
+@media (max-width: 1188px) {
+  .email-text {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 1080px) {
+  .email-text {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 950px) {
+  .email-text {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 915px) {
+  .email-text {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 768px) {
+  .email-text {
+    font-size: 1rem;
+  }
+}
