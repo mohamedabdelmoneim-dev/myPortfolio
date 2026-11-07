@@ -6,8 +6,7 @@ import { usePrefersReducedMotion } from "../../hooks/useMediaQuery";
 import { useLanguage } from "../../hooks/useLanguage";
 import Button from "../ui/Button";
 import SocialLinks from "../common/SocialLinks";
-// import myImage from "../../assets/images/myImage.jpeg";
-import myImage from "../../assets/images/Sunglasses and Yellow Tee Portrait.png";
+import myImage from "../../assets/images/myImage.jpeg";
 export default function Hero() {
   const { t } = useLanguage();
   const root = useRef(null);
