@@ -24,7 +24,7 @@ export const projects = [
     },
     technologies: ["React.js", "Vite", "React Router", "Context API", "useReducer", "Bootstrap", "Local Storage"],
     logo: luxeLogo,
-    liveUrl: "men3ms-ecommerce.vercel.app",
+    liveUrl: "https://men3ms-ecommerce.vercel.app/",
     githubUrl: "https://github.com/mohamedabdelmoneim-dev/my-ecommerce",
     contributions: [
       { en: "The Whole Project", ar: "المشروع كاملاً" }
