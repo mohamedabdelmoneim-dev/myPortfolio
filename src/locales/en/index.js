@@ -11,7 +11,7 @@ export default {
     name: "Mohamed Abdelmoneim",
     role: "Frontend Developer",
     intro:
-      "A frontend developer trainee from Kafr El-Sheikh, learning to build clean, responsive React interfaces, one practical project at a time.",
+      "From concept to reality — I turn your ideas into impactful digital experiences, bringing your vision to life through modern, interactive, and user-focused web solutions.",
     ctaProjects: "Explore my projects",
     ctaContact: "Get in touch",
     status: "Open to frontend internships & junior roles",
@@ -27,7 +27,7 @@ export default {
     ],
     facts: { location: "Location", focus: "Focus", direction: "Direction" },
     values: {
-      location: "Kafr El-Sheikh, Egypt (open to Cairo)",
+      location: "Kafr El-Sheikh, Egypt (open to reallocate)",
       focus: "React, responsive UI, clean code",
       direction: "Frontend internships & junior roles",
     },
