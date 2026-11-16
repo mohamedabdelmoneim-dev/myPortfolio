@@ -125,9 +125,18 @@ html.lenis, html.lenis body { height: auto; }
   color: rgb(var(--accent) / 0.9);
   transform: translateX(5px);
 }
+.my-image {
+  right: 25%;
+  top: 35%;
+  height: 25rem;
+}
 @media (max-width: 1188px) {
   .email-text {
     font-size: 0.95rem;
+  }
+  .my-image {
+    right: 20%;
+    top: 35%;
   }
 }
 @media (max-width: 1080px) {
@@ -138,6 +147,10 @@ html.lenis, html.lenis body { height: auto; }
 @media (max-width: 950px) {
   .email-text {
     font-size: 0.75rem;
+  }
+  .my-image {
+    right: 15%;
+    top: 35%;
   }
 }
 @media (max-width: 915px) {
@@ -150,3 +163,5 @@ html.lenis, html.lenis body { height: auto; }
     font-size: 1rem;
   }
 }
+
+

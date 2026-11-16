@@ -34,7 +34,7 @@ export default function Hero() {
         style={{ background: "radial-gradient(circle, rgb(var(--accent)), transparent 70%)" }}
       />
 
-      <div className="pointer-events-none absolute top-1/5 hidden -translate-y-1/2 overflow-hidden bg-surface/40 md:block" style={{ borderRadius: "50%", width : "28rem", height: "28rem", right: "25%" }}>
+      <div className="my-image pointer-events-none absolute hidden -translate-y-1/2 overflow-hidden bg-surface/40 md:block" style={{ borderRadius: "50%", width : "28rem" }}>
         <img src={myImage} alt="" />
       </div>
 

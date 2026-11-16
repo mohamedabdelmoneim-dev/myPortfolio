@@ -1,8 +1,14 @@
+import ar from "../locales/ar";
+import en from "../locales/en";
+
+export const translations = { ar, en };
+
+
 // Single source of truth for personal info. Edit here, not in components.
 export const SITE = {
   name: "Mohamed Abdelmoneim",
-  brand: "MOHAMED",
-  email: "", // Add your real email; the contact section hides it while empty.
+  brand: {en: "MOHAMED", ar: "محمد"},
+  email: "mohamedabdelmoneim664@gmail.com",
   location: { en: "Kafr El-Sheikh, Egypt", ar: "كفر الشيخ، مصر" },
   siteUrl: "", // Set after deployment, used for Open Graph URLs.
   social: {

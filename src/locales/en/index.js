@@ -1,8 +1,8 @@
 export default {
   common: { skip: "Skip to content", loading: "Loading" },
   nav: {
-    home: "Home", about: "About", skills: "Skills", projects: "Projects", contact: "Contact",
-    label: "Main navigation", openMenu: "Open menu", closeMenu: "Close menu",
+    home: "Home", about: "About", skills: "Skills", projects: "Projects", contact: "Contact", education: "Education",
+    label: "Main navigation", openMenu: "Open menu", closeMenu: "Close menu", brand: "MOHAMED",
   },
   language: { short: "عربي", switchTo: "Switch language to Arabic" },
   theme: { toLight: "Switch to light mode", toDark: "Switch to dark mode" },

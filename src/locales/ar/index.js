@@ -1,8 +1,8 @@
 export default {
   common: { skip: "تخطَّ إلى المحتوى", loading: "جارٍ التحميل" },
   nav: {
-    home: "الرئيسية", about: "نبذة", skills: "المهارات", projects: "المشاريع", contact: "تواصل",
-    label: "التنقل الرئيسي", openMenu: "فتح القائمة", closeMenu: "إغلاق القائمة",
+    home: "الرئيسية", about: "نبذة", skills: "المهارات", projects: "المشاريع", contact: "تواصل", education: "التعليم",
+    label: "التنقل الرئيسي", openMenu: "فتح القائمة", closeMenu: "إغلاق القائمة", brand: "محمد",
   },
   language: { short: "EN", switchTo: "تغيير اللغة إلى الإنجليزية" },
   theme: { toLight: "التبديل إلى الوضع الفاتح", toDark: "التبديل إلى الوضع الداكن" },

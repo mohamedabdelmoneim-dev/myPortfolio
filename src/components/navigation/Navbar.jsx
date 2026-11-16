@@ -14,7 +14,7 @@ import LanguageSwitcher from "../ui/LanguageSwitcher";
 const SECTION_IDS = NAV_ITEMS.map((item) => item.id);
 
 export default function Navbar() {
-  const { t, isRTL } = useLanguage();
+  const { t, pick, isRTL } = useLanguage();
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const isHome = pathname === "/";
@@ -74,7 +74,7 @@ export default function Navbar() {
     >
       <div className="container-page flex h-16 items-center justify-between md:h-20">
         <a href="/" onClick={goHome} className="font-display text-lg font-semibold tracking-[0.18em] text-fg">
-          {SITE.brand}
+          {pick(SITE.brand)}
           <span className="text-accent">.</span>
         </a>
 
